@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVBC Representações Comerciais | Intermediação e Expansão de Negócios B2B</title>
+    <meta name="description" content="Representação comercial e agenciamento de mercadorias. Conectamos indústrias, atacadistas e varejistas com foco em resultados e expansão de mercado.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Espaço reservado para Scripts de Rastreamento (GTM / Pixel) para otimização de campanhas -->
+    <!-- <script> ... </script> -->
+    
+    <style>
+        /* --- ESTILOS GERAIS E VARIÁVEIS --- */
+        :root {
+            --primary: #0f172a;       /* Azul Escuro / Chumbo */
+            --secondary: #0ea5e9;     /* Azul Claro Corporativo */
+            --secondary-hover: #0284c7;
+            --text-dark: #334155;
+            --text-light: #f8fafc;
+            --bg-light: #f1f5f9;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: var(--secondary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+        }
+
+        /* --- CADEÇALHO (NAVBAR) --- */
+        header {
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+            font-weight: 300;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--secondary);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 120px 0;
+            text-align: left;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #cbd5e1;
+        }
+
+        /* --- QUEM SOMOS --- */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 4px;
+            background-color: var(--secondary);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 16px;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* --- SERVIÇOS (CNAE 46.19-2-00) --- */
+        .services {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: var(--transition);
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--secondary);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #64748b;
+        }
+
+        /* --- CONTATO B2B --- */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .contact-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-item {
+            margin-bottom: 25px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--secondary);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .info-item p {
+            font-size: 16px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .contact-form {
+            background-color: var(--primary);
+            padding: 40px;
+            border-radius: 8px;
+            color: var(--white);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--white);
+            border-radius: 4px;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* --- FOOTER EXIGIDO PELO GOOGLE ADS --- */
+        footer {
+            background-color: #020617;
+            color: #94a3b8;
+            padding: 50px 0 25px 0;
+            font-size: 13px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-legal {
+            max-width: 800px;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+        }
+
+        /* --- BANNER DE COOKIES --- */
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            z-index: 9999;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cookie-text { font-size: 14px; max-width: 75%; }
+
+        /* --- MODAIS DE POLÍTICA/TERMOS --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(15, 23, 42, 0.8);
+            z-index: 10000;
+            justify-content: center; align-items: center; padding: 20px;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 700px; width: 100%; max-height: 85vh;
+            overflow-y: auto; position: relative;
+        }
+
+        .close-modal {
+            position: absolute; top: 20px; right: 20px;
+            font-size: 28px; cursor: pointer; color: var(--text-dark);
+        }
+
+        .modal-content h2 { color: var(--primary); margin-bottom: 20px; }
+        .modal-content h3 { color: var(--primary); margin: 20px 0 10px 0; font-size: 16px; }
+
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 32px; }
+            .about-grid, .contact-box { grid-template-columns: 1fr; gap: 30px; }
+            .cookie-banner { flex-direction: column; text-align: center; }
+            .cookie-text { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">MVBC <span>Representações</span></div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#sobre">A Empresa</a></li>
+                <li><a href="#solucoes">Soluções B2B</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Conectando Indústrias ao Varejo com Inteligência Comercial</h1>
+            <p>Atuamos como o elo estratégico entre fornecedores e o mercado consumidor. Agenciamento de mercadorias em geral com foco em performance e expansão de território.</p>
+            <a href="#contato" class="btn">Agendar Reunião Comercial</a>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <h2 class="section-title">Sobre a MVBC</h2>
+                    <p class="about-text">
+                        A <strong>MVBC Representações Comerciais LTDA</strong> é uma empresa matriz voltada à intermediação de negócios B2B. Fundada com o objetivo de otimizar a cadeia de suprimentos, atuamos como agentes do comércio para mercadorias em geral, sem limitação de nicho. Nossa missão é representar indústrias e grandes distribuidores, inserindo seus produtos em redes varejistas e atacadistas através de um planejamento comercial estruturado, garantindo rentabilidade para todas as pontas da negociação.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">Nosso Compromisso</h3>
+                    <ul style="list-style: none; color: #475569; line-height: 2;">
+                        <li>✓ Prospecção ativa e qualificada de clientes</li>
+                        <li>✓ Gestão completa da carteira de vendas</li>
+                        <li>✓ Transparência e ética na representação</li>
+                        <li>✓ Conformidade legal e fiscal nas operações</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS (CNAE) -->
+    <section id="solucoes" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossas Soluções</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Representação Comercial</h3>
+                    <p>Atuamos como o braço de vendas externo da sua indústria. Levamos o seu portfólio de produtos diretamente aos tomadores de decisão em varejos e atacados.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Expansão de Mercado</h3>
+                    <p>Mapeamento de novas praças e oportunidades de negócio. Introduzimos sua marca em regiões estratégicas, aumentando o *market share* de forma sustentável.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Agenciamento de Mercadorias</h3>
+                    <p>Intermediação ágil para uma ampla gama de categorias. Nossa flexibilidade permite a representação não especializada, adaptando-se às demandas do mercado.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gestão de Contas (Key Accounts)</h3>
+                    <p>Acompanhamento rigoroso do sell-in e sell-out, garantindo a manutenção do relacionamento com grandes redes e a recompra contínua dos produtos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Inicie uma Parceria</h2>
+            <div class="contact-box">
+                <div>
+                    <p style="margin-bottom: 30px; color: #64748b; font-size: 16px;">Seja você uma indústria buscando representação ou um lojista procurando novos fornecedores, nossa equipe está pronta para atender.</p>
+                    <div class="info-item">
+                        <strong>Escritório Matriz</strong>
+                        <p>Rua José Farias, 98<br>Edif Plena Center, Sala 506<br>Santa Luíza, Vitória - ES, CEP: 29045-300</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>E-mail Institucional</strong>
+                        <p>contato@mvbcrepresentacoes.com.br</p> 
+                    </div>
+                    <div class="info-item">
+                        <strong>Telefone / WhatsApp Comercial</strong>
+                        <p>(27) 99600-0000</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('Dados enviados com sucesso. Nosso departamento comercial entrará em contato.');">
+                        <div class="form-group">
+                            <label for="empresa">Nome da Empresa (CNPJ)</label>
+                            <input type="text" id="empresa" required placeholder="Razão Social ou Nome Fantasia">
+                        </div>
+                        <div class="form-group">
+                            <label for="responsavel">Nome do Responsável</label>
+                            <input type="text" id="responsavel" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Perfil de Interesse</label>
+                            <input type="text" id="assunto" required placeholder="Ex: Procuro Representante / Quero Comprar Produtos">
+                        </div>
+                        <div class="form-group">
+                            <label for="msg">Detalhes Adicionais</label>
+                            <textarea id="msg" rows="4" required placeholder="Resuma sua necessidade comercial"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%; background-color: var(--secondary-hover);">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER INSTITUCIONAL (Google Ads Compliance) -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#" onclick="openModal('policyModal'); return false;">Política de Privacidade</a> | 
+                <a href="#" onclick="openModal('termsModal'); return false;">Termos de Representação</a>
+            </div>
+            <div class="footer-legal">
+                © 2026 <strong>Mvbc Representacoes Comerciais LTDA</strong>. Todos os direitos reservados.<br>
+                Razão Social: Mvbc Representacoes Comerciais LTDA | CNPJ: 66.965.202/0001-86 | Porte: EPP<br>
+                Endereço: Rua José Farias, 98, Edif Plena Center Sala 506, Santa Luíza, Vitória - ES, CEP 29045-300<br>
+                Empresa Ativa registrada na Receita Federal do Brasil (Data de Abertura: 25/05/2026).<br>
+                <span style="font-size: 11px; display:block; margin-top:15px; opacity: 0.5;">Canal de comunicação corporativa com total aderência às políticas de transparência e veracidade exigidas pelo Google Ads.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- COOKIE BANNER -->
+    <div id="cookieBanner" class="cookie-banner">
+        <div class="cookie-text">
+            Este site utiliza cookies funcionais para garantir a melhor experiência de navegação e análise de métricas B2B, em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD).
+        </div>
+        <button class="btn" onclick="acceptCookies()">Aceitar Todos</button>
+    </div>
+
+    <!-- MODAL POLÍTICA DE PRIVACIDADE -->
+    <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('policyModal')">&times;</span>
+            <h2>Política de Privacidade</h2>
+            <p>A proteção dos dados corporativos é um pilar fundamental para a <strong>MVBC Representações Comerciais LTDA</strong>.</p>
+            <h3>1. Coleta e Uso de Informações B2B</h3>
+            <p>Coletamos dados empresariais fornecidos voluntariamente através de nossos canais de contato, com o único propósito de viabilizar o retorno comercial, estabelecer parcerias ou enviar propostas solicitadas.</p>
+            <h3>2. Confidencialidade</h3>
+            <p>Tratamos todas as informações como confidenciais. Não compartilhamos dados de *leads*, parceiros ou propostas com terceiros sem consentimento prévio, garantindo o sigilo das estratégias de expansão de nossos representados.</p>
+            <h3>3. Retenção de Dados</h3>
+            <p>Os dados informados são retidos em nosso banco de dados corporativo seguro apenas pelo tempo necessário para a prestação do serviço ou cumprimento de obrigações legais em vigor.</p>
+        </div>
+    </div>
+
+    <!-- MODAL TERMOS DE USO -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Termos de Representação Comercial</h2>
+            <p>Ao utilizar nosso portal corporativo, as empresas concordam com os seguintes termos:</p>
+            <h3>1. Relação Jurídica</h3>
+            <p>A MVBC Representações atua como agente intermediador. O contato inicial por meio deste site institucional não substitui a assinatura de um Contrato de Representação Comercial nos termos da legislação brasileira vigente.</p>
+            <h3>2. Informações de Portfólio</h3>
+            <p>Por se tratar de representação não especializada, nosso portfólio de mercadorias pode variar de acordo com as indústrias parceiras ativas. Solicitações de catálogos estão sujeitas à disponibilidade e regras de cada fornecedor.</p>
+            <h3>3. Autenticidade Institucional</h3>
+            <p>Garantimos a veracidade dos dados fiscais e de localização presentes no rodapé deste site, mantendo nossa operação 100% transparente perante órgãos reguladores e plataformas de publicidade digital.</p>
+        </div>
+    </div>
+
+    <!-- SCRIPTS JAVASCRIPT -->
+    <script>
+        window.onload = function() {
+            if (!localStorage.getItem('mvbcCookies')) {
+                document.getElementById('cookieBanner').style.display = 'flex';
+            }
+        };
+
+        function acceptCookies() {
+            localStorage.setItem('mvbcCookies', 'true');
+            document.getElementById('cookieBanner').style.display = 'none';
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>
